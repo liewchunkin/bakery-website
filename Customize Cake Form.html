@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+
+    <title>Dark Leaf Bakery</title>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <style>
+        .title{
+            width:100%;
+            display: inline-block;
+            font-size: xx-large;
+            background-image: url(texture3.jpg);
+            text-align: center;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        legend{
+            font-size: 36px;
+            color:mediumblue;
+            font-family: cursive;
+        }
+        .asterisk{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Option-->
+    <header>
+        <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+        </map>
+        <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+    </header>
+
+    <ul class="bar">
+        <li class="dropdown">
+            <a href="Gallery.html"> Gallery</a>
+            <div class="dropdown-content">
+                <a href="Product Description.html#bread">Bread</a>
+                <a href="Product Description.html#cake">Cake</a>
+                <a href="Product Description.html#cookies">Cookies</a>
+            </div>
+        </li>
+        <li>
+            <a href="Bakery Class.html">
+                Baking Class
+            </a>
+        </li>  
+        <li>
+            <a href="Catering.html">
+                Catering
+            </a>
+        </li> 
+         <li>
+            <a href="gift redeem form.html">
+                Gift Redeem
+            </a>
+        </li> 
+         <li>
+            <a href="Promotions&News.html">
+                Promotion
+            </a>
+        </li>  
+        <li>
+            <a href="sign in.html">
+                Sign In/Log Out
+            </a>
+        </li>
+    </ul>
+
+    <!--Content-->
+    <div class="title">
+        <p><img src="cakeicon.png">Customise Your Cake<img src="cakeicon.png"></p>
+    </div>
+
+    <form method="POST" action="http://www.darkleaf.com/main/process.cgi" name="darkleaf" style="background-image: url(greytexture2.jpg);">
+        <fieldset>
+            <legend><p>Customise Cake Form</p></legend>
+            <h2>All customized cake require at least 5-7 working days depending on complexity and design.</h2>
+            <p style="font-size:x-large;">Please fill in the form below:</p>
+            
+            <label for="name">Your Name<span class="asterisk">*</span></label><br>
+            <input type="text" id="name" name="customername" maxlength="20" size="50" required><br><br>
+            
+            <label for="mail">Email<span class="asterisk">*</span></label><br>
+            <input type="email" id="mail" name="customermail" maxlength="30" value="xxx@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" size="50" required><br><br>
+            
+            <label for="phone">Contact<span class="asterisk">*</span></label><br>
+            <input type="tel" id="phone" name="customerphone" maxlength="11" size="50" required><br><br>
+            
+            <label for="date">Collection Date<span class="asterisk">*</span></label><br>
+            <input type="date" id="date" name="collectiondate" required><br><br>
+            
+            <label for="time">Collection Time<span class="asterisk">*</span></label><br>
+            <select name="time">
+                <option value="12.00 - 15.00" >12.00 - 15.00</option>
+                <option value="15.00 - 18.00"  >15.00 - 18.00</option>
+                <option value="18.00 - 21.00" >18.00 - 21.00</option>
+             </select><br><br>
+             
+             <label for="event">Type of event<span class="asterisk">*</span></label><br>
+             <label><input type="radio" value="babyshower" name="event"checked="checked"/> Baby Shower</label>
+             <label><input type="radio" value="birthday" name="event"/> Birthday</label>
+             <label><input type="radio" value="anniversary" name="event"/> Anniversary</label>
+             <label><input type="radio" value="wedding" name="event"/> Wedding</label>
+             <label><input type="radio" value="others" name="event"/> Others</label><br><br>
+             
+             <label for="pax">Number of pax(max. 20)<span class="asterisk">*</span></label><br>
+             <input type="number" id="pax" name="numberofpax" min="0" max="20" required><br><br>
+
+             <label for="theme">Event theme(if any)</label><br>
+             <input type="text" id="theme" name="caketheme" size="50" maxlength="49"><br><br>
+
+             <label for="message">Message on cake(if any)</label><br>
+             <textarea id="message" name="cakemessage" style="width: 500px; height: 100px;">Enter your message</textarea><br><br>
+
+             <label for="reference">If you have a preferred design, feel free to upload here:</label><br>
+             <input type="file" id="reference" name="reference"><br><br>
+
+             <input type="reset">
+
+             <input type="submit">
+
+        </fieldset>
+    </form>
+
+    <!--Footer-->
+  <footer>
+        <nav id="left">
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                <li><a href="Location.html">Location</a></li>
+            </ul>
+        </nav>
+        <nav id="left">
+            <ul>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                <li><a href="Feedback Form.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <nav id="right">
+            <blockquote>Get more updated information!<br/>Follow</blockquote>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+        </nav>
+    </footer>
+    
+</body>
+
+</html>

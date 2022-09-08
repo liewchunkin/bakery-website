@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+
+    <title>Dark Leaf Bakery</title>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <style>
+        .article{
+            padding-left: 30%;
+            background-color: yellow;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:black;
+            font-size:larger ;
+            border: 1px dotted black;
+            text-align:justify;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        .tab button{
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: large;
+            font-family: cursive;
+            font-weight: bold;
+            width:50%;
+            height:50px;
+            background-color: rgb(245, 207, 150);
+        }
+
+        .tab button:hover {
+            background-color:lightgoldenrodyellow;
+        }
+
+        .tab button.active {
+            background-color: #d2aa70;
+        }
+
+        .tabcontent {
+            display: block;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .topright {
+            float: right;
+            cursor: pointer;
+            font-size: 28px;
+        }
+
+        .topright:hover {color: gold;}
+
+        div {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Option-->
+    <header>
+        <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+        </map>
+        <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+    </header>
+
+    <ul class="bar">
+        <li class="dropdown">
+            <a href="Gallery.html"> Gallery</a>
+            <div class="dropdown-content">
+                <a href="Product Description.html#bread">Bread</a>
+                <a href="Product Description.html#cake">Cake</a>
+                <a href="Product Description.html#cookies">Cookies</a>
+            </div>
+        </li>
+        <li>
+            <a href="Bakery Class.html">
+                Baking Class
+            </a>
+        </li>  
+        <li>
+            <a href="Catering.html">
+                Catering
+            </a>
+        </li> 
+         <li>
+            <a href="gift redeem form.html">
+                Gift Redeem
+            </a>
+        </li> 
+         <li>
+            <a href="Promotions&News.html">
+                Promotion
+            </a>
+        </li>  
+        <li>
+            <a href="sign in.html">
+                Sign In/Log Out
+            </a>
+        </li>
+    </ul>
+    
+    <!--Content-->
+        <div class="article">
+            <p><b>Important Notice: Due to MCO, all outlets will be closed until MCO ends.</b></p>
+        </div>
+    
+        <div class="tab">
+            <button class="tablinks" onclick="openCategory(event,'News')" id="defaultOpen" >News</button>
+            <button class="tablinks" onclick="openCategory(event,'Promotions')" >Promotions</button>
+        </div>
+
+        <div id="News" class="tabcontent" style="background-image: url(newspaper.jpg)" >
+            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+            <h1 style="padding-left: 47%;">News</h1>
+            <div class="row" style="text-align: center;">
+                <div class="column">
+                    <a href="Bakery Class.html" target="_blank"><img src="bakingclass.jpg" width="300px"></a>
+                    </br><h3>Registration for Baking Class in May!</h3>
+                </div>
+                <div class="column">
+                    <a href="New Outlet.html" target="_blank"><img src="opening soon.jpg" width="200px"></a>
+                    </br><h3>New Outlet Opening Soon in Pahang!!!</h3>
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <div class="column">
+                    <a href="Hiring for job.html" target="_blank"><img src="hiring.png" width="300px"></a>
+                    </br><h3>Hiring for staffs! We need you!</h3>
+                </div>
+                <div class="column">
+                    <a href="Lucky Draw Form.html" target="_blank"><img src="lucky draw.png" width="370px"></a>
+                    </br><h3>Stand a chance to win a great prize! Click to join the Lucky Draw contest!</h3>
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <div class="column">
+                    <a href="Annual dinner.html"target="_blank"><img src="annual dinner.jpg" width="300px"></a>
+                    </br><h3>Annual dinner for staff in 2020</h3>
+                </div>
+                <div class="column">
+                    <a href="newspaper.html" target="_blank"><img src="newspaper.png" width="200px"></a>
+                    </br><h3>We are on the news! Check it out!</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="Promotions" class="tabcontent" style="background-image: url(yellowish.jpg);">
+            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+            <h1 style="padding-left: 45%;">Promotions</h1>
+            <div class="row" style="text-align: center;">
+                <div class="column">
+                    <a href="Fasting sale" target="_blank"><img src="ramadan.jpg" width="200px"></a>
+                    </br><h3>Fasting during MCO? Don't worry!</h3>
+                </div>
+                <div class="column">
+                    <a href="Delivery sale" target="_blank"><img src="delivery.jpg" width="200px"></a>
+                    </br><h3>Free delivery during MCO!</h3>
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <div class="column">
+                    <a href="Bread feast" target="_blank"><img src="breadsale.jpg" width="300px"></a>
+                    </br><h3>Special discount for a limited time!</h3>
+                </div>
+                <div class="column">
+                    <a href="Clearance sale" target="_blank"><img src="clearance.jpg" width="200px"></a>
+                    </br><h3>Clearance sale after 5p.m.!</h3>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        function openCategory(evt, categoryName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(categoryName).style.display = "block";
+              evt.currentTarget.className += " active";
+              }
+              document.getElementById("defaultOpen").click();
+            </script>
+
+    
+    <!--Footer-->
+    <footer>
+        <nav id="left">
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                <li><a href="Location.html">Location</a></li>
+            </ul>
+        </nav>
+        <nav id="left">
+            <ul>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                <li><a href="Feedback Form.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <nav id="right">
+            <blockquote>Get more updated information!<br/>Follow</blockquote>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+        </nav>
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+
+    <title>Dark Leaf Bakery</title>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+
+        .article{
+            padding-left: 45%;
+            background-image: url(texture.jpg);
+            width:97.5%;
+            height:36px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .column{
+            float:left;
+            padding:10px;
+            font-size:larger;
+        }
+        .column.left{
+            width:20%;
+            background-image: url(texture2.jpg);
+            height:487px;
+        }
+
+        .column.middle{
+            width:50%;
+            background-image: url(texture2.jpg);
+            list-style-image: url(breadicon.png);
+            height:487px;
+        }
+        .column.right{
+            width:27.5%;
+            height:487px;
+            text-align: left;
+            padding-top: 8%;
+            background-image: url(texture2.jpg);
+        }
+
+        .column.right ul li:first-of-type{
+            list-style-image: url(phoneicon.png);
+        }
+
+        .column.right ul li:nth-of-type(2){
+            list-style-image: url(faxicon.png);
+        }
+
+        .column.right ul li:last-of-type{
+            list-style-image: url(mailicon.png);
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+            width: 100%;
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <!--Option-->
+    <header>
+        <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+        </map>
+        <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+    </header>
+
+    <ul class="bar">
+        <li class="dropdown">
+            <a href="Gallery.html"> Gallery</a>
+            <div class="dropdown-content">
+                <a href="Product Description.html#bread">Bread</a>
+                <a href="Product Description.html#cake">Cake</a>
+                <a href="Product Description.html#cookies">Cookies</a>
+            </div>
+        </li>
+        <li>
+            <a href="Bakery Class.html">
+                Baking Class
+            </a>
+        </li>  
+        <li>
+            <a href="Catering.html">
+                Catering
+            </a>
+        </li> 
+         <li>
+            <a href="gift redeem form.html">
+                Gift Redeem
+            </a>
+        </li> 
+         <li>
+            <a href="Promotions&News.html">
+                Promotion
+            </a>
+        </li>  
+        <li>
+            <a href="sign in.html">
+                Sign In/Log Out
+            </a>
+        </li>
+    </ul>
+  
+<!--Content-->
+
+<div class="article">
+    <h1>Location</h1>
+</div>
+
+<div class="row">
+<div class="column left">
+    <h2>Main Office</h2>
+    <p><b>Dark Leaf Sdn. Bhd,</b></br>
+       S20, Jalan Bamboo,</br>
+       52100, Kuala Lumpur,</br>
+       Malaysia. 
+    </p>
+</div>
+
+<div class="column middle">
+    <h2>Other Outlets</h2>
+    <ul>
+        <li>
+            <h3>Kuala Lumpur</h3>
+            <p>Address: No 59, Jalan Banana GD 15/1, 52100 Kuala Lumpur</br>
+               Business Hour: 0800 a.m. to 10.30p.m. 
+            </p>
+        </li>
+        <li>
+            <h3>Perak</h3>
+            <p>Address: Lot No. 28, Lower Ground Floor, Fabulous Mall, Jalan Durian, 31900 Ipoh, Perak</p>
+        </li>
+        <li>
+            <h3>Johor</h3>
+            <p>Address: Lot No.K25, Kaya Grocer, Jalan Rambutan, 81700 Pasir Gudang, Johor</p>
+        </li>
+    </ul>
+</div>
+<div class="column right">
+    <p>For more enquiry, kindly contact us at:</p>
+    <ul>
+        <li>tel:<a href="tel:+03-9876532">03-9876532</a></li>
+        <li>fax:<a href="tel:+03-1593578">03-1593578</a></li>
+        <li>mail:<a href="mailto:darkleaf20@gmail.com">darkleaf20@gmail.com</a></li>
+    </ul>
+</div>
+</div>
+
+
+
+    
+    <!--Footer-->
+    <footer>
+        <nav id="left">
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                <li><a href="Location.html">Location</a></li>
+            </ul>
+        </nav>
+        <nav id="left">
+            <ul>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                <li><a href="Feedback Form.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <nav id="right">
+            <blockquote>Get more updated information!<br/>Follow</blockquote>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

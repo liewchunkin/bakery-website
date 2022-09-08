@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <link href="scroll to top.css" rel="stylesheet"/>
+  <script src="scroll to top.js"></script>
+  <link href="scroll effect.css" rel="stylesheet"/>
+
+<head>
+  
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dark Leaf Bakery Feedback Form</title>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link href="rb_forms.css" rel="stylesheet" />
+    
+    <script>
+      function myFunction() {
+        alert("Thanks for your feedback! Going back to main page...");
+      }
+      </script>    
+   
+<style>
+   form{
+      font-family:cursive;
+      font-size:larger;
+   }
+</style>
+
+</head>
+
+<body>
+
+   <header>
+      <map id="ImgMap0" name="ImgMap0">
+          <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+      </map>
+      <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+  </header>
+
+  <ul class="bar">
+      <li class="dropdown">
+          <a href="Gallery.html"> Gallery</a>
+          <div class="dropdown-content">
+              <a href="Product Description.html#bread">Bread</a>
+              <a href="Product Description.html#cake">Cake</a>
+              <a href="Product Description.html#cookies">Cookies</a>
+          </div>
+      </li>
+      <li>
+          <a href="Bakery Class.html">
+              Baking Class
+          </a>
+      </li>  
+      <li>
+          <a href="Catering.html">
+              Catering
+          </a>
+      </li> 
+       <li>
+          <a href="gift redeem form.html">
+              Gift Redeem
+          </a>
+      </li> 
+       <li>
+          <a href="Promotions&News.html">
+              Promotion
+          </a>
+      </li>  
+      <li>
+          <a href="sign in.html">
+              Sign In/Log Out
+          </a>
+      </li>
+  </ul>
+    
+    <h2 style="text-align: center; color:pink">Feedback Form</h2>
+    <form id="survey" action="Gallery.html" method="post">
+      <fieldset id="custInfo">
+         <legend>Customer Information</legend>
+         
+         <div class="formRow">
+            <label for="name">Name*</label>
+            <input name="custName" id="name" type="text" placeholder="Liew Chun Kin" required />
+         </div>
+
+         <div class="formRow">            
+            <label for="street">Street address</label>
+            <input name="custStreet" id="street" type="text" />
+         </div>
+
+         <div class="formRow"> 
+            <label for="city">City</label>
+            <input name="custCity" id="city" type="text" value="Kuala Lumpur" />
+         </div>
+
+         <div class="formRow"> 
+            <label for="state">State</label>
+            <input name="custState" id="state" type="text" value="Federal Territories" />
+         </div>
+
+         <div class="formRow"> 
+            <label for="zip">Postal code</label>
+            <input name="custZip" id="zip" type="text" placeholder="53300" 
+             pattern="^\d{5}(-\d{4})?$" />
+         </div>
+
+         <div class="formRow"> 
+            <label for="phone">Phone number</label>
+            <input name="custPhone" id="phone" type="tel" placeholder="0169893528"
+             pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+         </div>
+
+         <div class="formRow"> 
+            <label for="mail">E-mail*</label>
+            <input name="custEmail" id="mail" type="email" required/>
+         </div>
+
+         <div class="formRow">
+            <label for="info">Where did you hear about us?<br />(select all that apply)</label>
+            <select name="infoSrc" id="info" size="5" multiple>
+               <option value="internet">Internet</option>
+               <option value="mag">Magazine</option>
+               <option value="news">Newspaper</option>
+               <option value="word">Word of Mouth</option>
+               <option value="other">Other</option>
+            </select>
+         </div>
+
+         <div class="formRow">
+            <label for="dish">What's your favorite dish?</label>
+            <input name="favDish" id="dish" type="text" list="dishType" />
+            <datalist id="dishType">
+               <option value="Red Velvet Cake" >
+               <option value="Cheese Cake" >
+               <option value="Chocolate Chip Cookie" >
+               <option value="Almond Cookie" >
+               <option value="Banana Bread" >
+               <option value="Chocolate Bread" >
+            </datalist>
+         </div>            
+
+         <div class="formRow">
+            <label for="dineSpin">How many times do you dine out per month?</label>
+            <input name="dineOut" id="dineSpin" type="number"
+                   value="1" step="1" min="0" max="20" />
+         </div>
+         
+         <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+         <label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
+         
+      </fieldset>
+
+      <fieldset id="expInfo">
+         <legend>Share Your Experience at Dark Leaf Bakery</legend>
+         
+         <div class="formRow">
+            <label for="visit">Date of visit</label>
+            <input name="visitDate" id="visit" type="datetime-local" />
+         </div>  
+
+         <div class="formRow">
+            <label for="order">Order type</label>
+            <select name="orderType" id="order">
+               <option value="order1">Carry out</option>
+               <option value="order2">Delivery</option>
+               <option value="order3" selected>Dine in</option>
+            </select>
+         </div>
+
+         <div class="formRow">
+            <label>Was your service friendly?</label>
+            <fieldset class="optGroup">
+               <label for="fYes">Yes</label>
+               <input name="sFriend" id="fYes" value="yes" type="radio" />
+               <label for="fNo">No</label>
+               <input name="sFriend" id="fNo" value="no" type="radio" />
+            </fieldset>
+         </div>
+
+         <div class="formRow">
+            <label>Was your order correct?</label>
+            <fieldset class="optGroup">
+               <label for="cYes">Yes</label>
+               <input name="oCorrect" id="cYes" value="yes" type="radio" />
+               <label for="cNo">No</label>
+               <input name="oCorrect" id="cNo" value="no" type="radio" />
+            </fieldset>
+         </div>
+
+         <div class="formRow">
+            <label>Was your food taste good?</label>
+            <fieldset class="optGroup">
+               <label for="hYes">Yes</label>
+               <input name="foodHot" id="hYes" value="yes" type="radio" />
+               <label for="hNo">No</label>
+               <input name="foodHot" id="hNo" value="no" type="radio" />
+            </fieldset>
+         </div>
+
+         <div class="formRow">
+            <label for="rangeBox">Rate the overall service<br />
+                   (0=poor; 10=great)</label>
+            0
+            <input name="serviceRate" id="rangeBox" type="range"
+                   value="5" step="1" min="0" max="10" />
+            10
+         </div>
+
+         <label for="commBox">Tell us more about your experience!</label>
+         <textarea name="custExp" id="commBox"></textarea>
+         
+      </fieldset>  
+
+      <div id="buttons">
+         <input type="submit" value="Submit My Form" onclick="myFunction()"/>
+         <input type="reset" value="Cancel" />
+      </div>
+   </form>
+   
+   <marquee><h2 style="text-shadow:2px 2px 8px  purple; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><i><b>Thanks for your feedbacks!!</b></i><h2></marquee> 
+    
+    
+      <footer>
+         <nav id="left">
+             <ul>
+                 <li><a href="About Us.html">About Us</a></li>
+                 <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                 <li><a href="Location.html">Location</a></li>
+             </ul>
+         </nav>
+         <nav id="left">
+             <ul>
+                 <li><a href="Contact Us.html">Contact Us</a></li>
+                 <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                 <li><a href="Feedback Form.html">Feedback</a></li>
+             </ul>
+         </nav>
+         <nav id="right">
+             <blockquote>Get more updated information!<br/>Follow</blockquote>
+             <li><a href="#" class="fa fa-twitter"></a></li>
+             <li><a href="#" class="fa fa-youtube"></a></li>
+             <li><a href="#" class="fa fa-instagram"></a></li>
+             <li><a href="#" class="fa fa-facebook"></a></li>
+         </nav>
+     </footer>
+    
+  </label>
+    
+</body>
+
+</html>

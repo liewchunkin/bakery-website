@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <link href="scroll to top.css" rel="stylesheet"/>
+    <script src="scroll to top.js"></script>
+    <link href="scroll effect.css" rel="stylesheet"/>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+
+    <title>Dark Leaf Bakery Cart</title>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+</head>
+
+<style>
+
+table,th{
+    border:1px solid black;
+    border-collapse: collapse;
+    background-color: whitesmoke;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:larger;
+}
+
+caption{
+     font-size: larger; margin-top: 0.67em; margin-bottom: 0.67em; margin-left: 0; margin-right: 0; font-weight: bold;
+}
+
+.btn1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 50px 50px 0px;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+input[type=text] {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid rgb(124, 124, 124);
+  border-radius: 3px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+</style>
+
+<script type="text/javascript">
+
+
+	function Calculate_Item1(){
+	
+		var total1;
+		var qty1 = document.getElementById('Qty1').value;
+	
+		total1= eval(qty1)* eval(8.00);
+
+		document.getElementById('Total1').value= total1;
+	}
+	
+
+	function Calculate_Item2(){
+	
+		var total2;
+		var qty2 = document.getElementById('Qty2').value;
+	
+		total2= eval(qty2)* eval(9.00);
+
+		document.getElementById('Total2').value= total2;
+	}
+	
+    function Calculate_Item3(){
+	
+    var total3;
+    var qty3 = document.getElementById('Qty3').value;
+
+    total3= eval(qty3)* eval(4.00);
+
+    document.getElementById('Total3').value= total3;
+}
+
+function Calculate_Item4(){
+	
+    var total4;
+    var qty4 = document.getElementById('Qty4').value;
+
+    total4= eval(qty4)* eval(4.00);
+
+    document.getElementById('Total4').value= total4;
+}
+
+function Calculate_Item5(){
+	
+    var total5;
+    var qty5 = document.getElementById('Qty5').value;
+
+    total5= eval(qty5)* eval(5.00);
+
+    document.getElementById('Total5').value= total5;
+}
+
+function Calculate_Item6(){
+	
+    var total6;
+    var qty6 = document.getElementById('Qty6').value;
+
+    total6= eval(qty6)* eval(6.00);
+
+    document.getElementById('Total6').value= total6;
+}
+
+	function Calculate_All(){
+	
+		var grand_total;
+		var total1;
+    	var total2;
+        var total3;
+        var total4;
+        var total5;
+        var total6;
+		var qty1 = document.getElementById('Qty1').value;
+		var qty2 = document.getElementById('Qty2').value;
+        var qty3 = document.getElementById('Qty3').value;
+        var qty4 = document.getElementById('Qty4').value;
+        var qty5 = document.getElementById('Qty5').value;
+        var qty6 = document.getElementById('Qty6').value;
+	
+		total1= eval(qty1)* eval(8.00);
+		total2= eval(qty2)* eval(9.00);
+        total3= eval(qty3)* eval(4.00);
+        total4= eval(qty4)* eval(4.00);
+        total5= eval(qty5)* eval(5.00);
+        total6= eval(qty6)* eval(6.00);
+		
+
+		grand_total = total1 + total2 + total3 + total4 + total5 + total6;
+		
+		document.getElementById('Total1').value= total1;
+		document.getElementById('Total2').value= total2;
+        document.getElementById('Total3').value= total3;
+        document.getElementById('Total4').value= total4;
+        document.getElementById('Total5').value= total5;
+        document.getElementById('Total6').value= total6;
+		document.getElementById('Gtotal').value= grand_total.toFixed(2);
+	}
+
+
+	
+	function Calc_PostLaju(){
+	
+	  var grand_total2 = document.getElementById('Gtotal').value;
+      var gtotal_post = eval(grand_total2) +  eval(10.00);
+      document.getElementById('PostageFee').value= gtotal_post.toFixed(2);
+	}
+	
+	function Calc_Gdex(){
+	
+	  var grand_total2 = document.getElementById('Gtotal').value;
+      var gtotal_post = eval(grand_total2) +  eval(20.00);
+      document.getElementById('PostageFee').value= gtotal_post.toFixed(2);
+	}
+	
+	function Calc_Skynet(){
+	
+	  var grand_total2 = document.getElementById('Gtotal').value;
+      var gtotal_post = eval(grand_total2) +  eval(30.00);
+      document.getElementById('PostageFee').value= gtotal_post.toFixed(2);
+	}
+	
+	function Calc_promo(){
+	
+	  var grand_total_Postage = document.getElementById('PostageFee').value;
+	  var promo_price = document.getElementById('promo').value;
+	  
+	  if (promo_price < 0){
+	     	alert("Invalid promo!");
+	  }else{
+	  
+	        var gtotal_post = eval(grand_total_Postage) -  eval(promo_price);
+      		document.getElementById('promoTotal').value= gtotal_post.toFixed(2);
+	  }
+	}
+
+    function myFunction() {
+          var x;
+          if (confirm("Do you want to proceed to payment page?") == true) {
+              document.location.href = "Delivery Page.html";
+          } else {
+              document.location.href = "Add to cart.html";
+          }
+      }
+
+</script>
+
+
+<body>
+    <header>
+        <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+        </map>
+        <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+    </header>
+
+    <ul class="bar">
+        <li class="dropdown">
+            <a href="Gallery.html"> Gallery</a>
+            <div class="dropdown-content">
+                <a href="Product Description.html#bread">Bread</a>
+                <a href="Product Description.html#cake">Cake</a>
+                <a href="Product Description.html#cookies">Cookies</a>
+            </div>
+        </li>
+        <li>
+            <a href="Bakery Class.html">
+                Baking Class
+            </a>
+        </li>  
+        <li>
+            <a href="Catering.html">
+                Catering
+            </a>
+        </li> 
+         <li>
+            <a href="gift redeem form.html">
+                Gift Redeem
+            </a>
+        </li> 
+         <li>
+            <a href="Promotions&News.html">
+                Promotion
+            </a>
+        </li>  
+        <li>
+            <a href="sign in.html">
+                Sign In/Log Out
+            </a>
+        </li>
+    </ul>
+
+    <form action="Check out&Payment.html">
+        <table width="100%">
+
+            <h2 style="text-align: center; color:pink">Cart</h2>
+            
+            <tr>
+                <th> Item(s)</th>
+                <th> Quantity</th>
+                <th> Price</th>
+                <th> Total</th>
+            </tr>
+
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td><img alt="Red Velvet Cake" src="red velvet cake2.jpg" width="100" height="100" ><br>Red Velvet Cake</td>
+                <td> <input type="text" style="text-align:right" name="Qty1" id="Qty1" onchange="Calculate_Item1()"/></td>
+                <td>8.00 </td>
+                <td> <input type="text" style="text-align:right" name="Total1" id="Total1" disabled="disabled"/></td>
+            </tr>
+
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td><img alt="Cheese Cake" src="cheese cake.jpg" width="100" height="100" ><br>Cheese Cake</td>
+                <td> <input type="text" style="text-align:right" name="Qty2" id="Qty2" onchange="Calculate_Item2()"/></td>
+                <td>9.00 </td>
+                <td> <input type="text" style="text-align:right" name="Total2" id="Total2" disabled="disabled"/></td>
+            </tr>
+
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td><img alt="Chocolate Chip Cookie" src="chocolate chip cookies.jpg" width="100" height="100" ><br>Chocolate Chip Cookie</td>
+                <td> <input type="text" style="text-align:right" name="Qty3" id="Qty3" onchange="Calculate_Item3()"/></td>
+                <td>4.00 </td>
+                <td> <input type="text" style="text-align:right" name="Total3" id="Total3" disabled="disabled"/></td>
+            </tr>
+
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td><img alt="Almond Cookie" src="almond cookie.jpg" width="100" height="100" ><br>Almond Cookie</td>
+                <td> <input type="text" style="text-align:right" name="Qty4" id="Qty4" onchange="Calculate_Item4()"/></td>
+                <td>4.00 </td>
+                <td> <input type="text" style="text-align:right" name="Total4" id="Total4" disabled="disabled"/></td>
+            </tr>
+
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td><img alt="Banana Bread" src="banana bread.jpg" width="100" height="100" ><br>Banana Bread</td>
+                <td> <input type="text" style="text-align:right" name="Qty5" id="Qty5" onchange="Calculate_Item5()"/></td>
+                <td>5.00 </td>
+                <td> <input type="text" style="text-align:right" name="Total5" id="Total5" disabled="disabled"/></td>
+            </tr>
+
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td><img alt="Chocolate Bread" src="chocolate bread.jpg" width="100" height="100" ><br>Chocolate Bread</td>
+                <td> <input type="text" style="text-align:right" name="Qty6" id="Qty6" onchange="Calculate_Item6()"/></td>
+                <td>6.00 </td>
+                <td> <input type="text" style="text-align:right" name="Total6" id="Total6" disabled="disabled"/></td>
+            </tr>
+
+            <tr align="center">
+                <td>&nbsp;</td>
+                <td> &nbsp;</td>
+                <td>Grand Total:</td>
+                <td> <input type="text" style="text-align:right" name="Gtotal" id="Gtotal" disabled="disabled"/></td>
+            </tr>
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td>&nbsp;</td>
+                <td> &nbsp;</td>
+                <td>&nbsp;</td>
+                <td> <input type="button" onclick="Calculate_All()" value="Calculate" style="margin-bottom: 10px;"/></td>
+            </tr>
+                <tr align="left" style="border-bottom:1px solid black ;">
+                <td>&nbsp;</td>
+                <td> &nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="radio" style="margin-top: 10px;" name="post" id="post1" onclick="Calc_PostLaju()"/> PosLaju (RM 10.00)<br/> 
+                    <input type="radio" name="post" id="post2" onclick="Calc_Gdex()"/> GDex (RM 20.00) <br/>
+                    <input type="radio" style="margin-bottom: 10px;" name="post" id="post3" onclick="Calc_Skynet()"/> SkyNet (RM 30.00) <br/>
+                </td>
+            </tr>
+            <tr align="center" style="border-bottom:1px solid black ;">
+                <td>&nbsp;</td>
+                <td> &nbsp;</td>
+                <td> Grand Total + Postage Fee: </td>
+                <td><input type="text" style="text-align:right" name="PostageFee" id="PostageFee" disabled="disabled"/> </td>
+            </tr>
+        
+            <tr align="center">
+                <td>&nbsp; <br/><br/><br/><br/><br/></td>
+                <td> Promo (RM):</td>
+                <td> <input type="text" style="text-align:right" name="promo" id="promo" onchange="Calc_promo()" /></td>
+                <td><input type="text" style="text-align:right" name="promoTotal" id="promoTotal" disabled="disabled"/> </td>
+            </tr>
+        
+            
+            
+            
+        </table>
+        
+        <input style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: xx-large;"  type="submit" value="Payment" class="btn1" onclick="myFunction()">    
+        
+        
+        
+        
+        </form>
+
+      
+
+        <footer>
+            <nav id="left">
+                <ul>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                    <li><a href="Location.html">Location</a></li>
+                </ul>
+            </nav>
+            <nav id="left">
+                <ul>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                    <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                    <li><a href="Feedback Form.html">Feedback</a></li>
+                </ul>
+            </nav>
+            <nav id="right">
+                <blockquote>Get more updated information!<br/>Follow</blockquote>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-youtube"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+            </nav>
+        </footer>
+
+    
+</body>
+
+</html>

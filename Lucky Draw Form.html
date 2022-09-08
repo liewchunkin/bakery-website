@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+
+    <title>Dark Leaf Bakery</title>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+
+        .banner{
+            display: inline-block;
+            padding: 0%;
+            margin: 0%;
+            width: 100%;
+            background-image: url(greentexture.jpg);
+        }
+
+        .column{
+            float:left;
+            padding:0;
+            margin: 0;
+            font-size:larger;
+            background-image: url(greentexture.jpg);
+        }
+
+        .column.left{
+            width: 30%;
+            height: 514px;
+        }
+
+        .column.middle{
+            width: 40%;
+            height: 514px;
+        }
+
+        .column.right{
+            width: 30%;
+            background-image: url(greytexture.jpg);
+            border: 1px solid black;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+            width: 100%;
+            }
+        }
+
+        legend{
+            font-size: 36px;
+            color:mediumblue;
+            font-family: cursive;}
+    </style>
+</head>
+
+<body>
+    <!--Option-->
+    <header>
+        <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+        </map>
+        <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+    </header>
+
+    <ul class="bar">
+        <li class="dropdown">
+            <a href="Gallery.html"> Gallery</a>
+            <div class="dropdown-content">
+                <a href="Product Description.html#bread">Bread</a>
+                <a href="Product Description.html#cake">Cake</a>
+                <a href="Product Description.html#cookies">Cookies</a>
+            </div>
+        </li>
+        <li>
+            <a href="Bakery Class.html">
+                Baking Class
+            </a>
+        </li>  
+        <li>
+            <a href="Catering.html">
+                Catering
+            </a>
+        </li> 
+         <li>
+            <a href="gift redeem form.html">
+                Gift Redeem
+            </a>
+        </li> 
+         <li>
+            <a href="Promotions&News.html">
+                Promotion
+            </a>
+        </li>  
+        <li>
+            <a href="sign in.html">
+                Sign In/Log Out
+            </a>
+        </li>
+    </ul>
+    
+    <!--Content-->
+    <div class="banner"><img src="ovenbanner.png" width="100%"></div>
+
+    <div><h1 style="width: 100%;background-image: url(greentexture2.jpg); display: inline-block; padding: 0%; margin: 0%; font-family: cursive; text-align: center;"><img src="ovenicon.png">Win an Industrial Oven,worth RM1,500!<img src="ovenicon.png"></h1></div>
+
+    <div class="row">
+        
+        <div class="column left">
+            <p><img src="oven.png" width="100%"></p>
+        </div>
+        
+        <div class="column middle">
+            <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: darkgreen;"><i>Would you like to start off your baking experience with one of the best oven?</i></h3>
+            <p style="color:darkblue; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">To celebrate the upcoming Hari Raya Aidilfitri, we are giving one lucky winner a industrial baking oven, worth RM1,500!</p>
+            <p style="color:darkblue; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Stand a chance to win the prize by purchasing an amount of RM30 or above in any of our outlets to obtain the entry voucher!</p>
+            <p style="color:darkblue; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">With just two weeks to enter, simply fill up your name, email and voucher code and try out your luck!</p>
+            <p style="color:darkblue; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The event will ends at 11.59p.m. on 10 April 2020 and the winner will be chosen randomly snd notified via email.</p>
+            <h4>Good Luck!</h4>
+        </div>
+        
+        <div class="column right">
+            <form method="POST" action="http://www.darkleaf.com/main/process.cgi" name="darkleaf">
+                <fieldset>
+                    <legend><p>Lucky Draw Contest Form</p></legend>
+
+                    <h1 id=deadline style="padding-left: 15%;"></h1>
+
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="customername" maxlength="20" size="50" required><br><br>
+
+                    <label for="mail">Email</label><br>
+                    <input type="email" id="mail" name="customermail" maxlength="30" size="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br><br>
+
+                    <label for="voucher">Voucher code</label><br>
+                    <input type="number" id="voucher" name="vouchercode" pattern="[0-9].{4.6}" title="Must contain 4-6 numbers"><br><br>
+
+                    <input type="submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var countDownDate= new Date("May 10, 2020 11:59:59").getTime();
+
+        var x=setInterval(function(){
+
+            var now = new Date().getTime();
+
+            var distance=countDownDate-now;
+
+            var days = Math.floor(distance/(1000*60*60*24));
+            var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var minutes= Math.floor((distance%(1000*60*60))/(1000*60));
+            var seconds= Math.floor((distance%(1000*60))/1000);
+
+            document.getElementById("deadline").innerHTML = days+"d"+hours+"h"+minutes+"m"+seconds+"s";
+
+            if (distance<0){
+                clearinterval(x);
+                document.getElementById("deadline").innerHTML="END OF CONTEST";
+            }
+        }, 1000);
+    </script>
+    
+    <!--Footer-->
+    <footer>
+        <nav id="left">
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                <li><a href="Location.html">Location</a></li>
+            </ul>
+        </nav>
+        <nav id="left">
+            <ul>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                <li><a href="Feedback Form.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <nav id="right">
+            <blockquote>Get more updated information!<br/>Follow</blockquote>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+        </nav>
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+
+    <title>Dark Leaf Bakery</title>
+    <style>
+        
+        h2 {
+            text-shadow: 2px 2px #f44336;
+            font-size: 30px;
+        }
+    
+        fieldset {
+           background-color: rgb(241, 232, 181);
+           border-radius: 20px;
+           -webkit-flex: 1 1 300px;
+           flex: 1 1 300px;
+           font-size: 0.6em;
+           padding: 12px;
+          margin: 0px auto;
+          width: 70%;
+          height: 50%
+        }
+    </style>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+
+<body>
+    <!--Option-->
+    <header>
+        <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+        </map>
+        <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+    </header>
+
+    <ul class="bar">
+        <li class="dropdown">
+            <a href="Gallery.html"> Gallery</a>
+            <div class="dropdown-content">
+                <a href="Product Description.html#bread">Bread</a>
+                <a href="Product Description.html#cake">Cake</a>
+                <a href="Product Description.html#cookies">Cookies</a>
+            </div>
+        </li>
+        <li>
+            <a href="Bakery Class.html">
+                Baking Class
+            </a>
+        </li>  
+        <li>
+            <a href="Catering.html">
+                Catering
+            </a>
+        </li> 
+         <li>
+            <a href="gift redeem form.html">
+                Gift Redeem
+            </a>
+        </li> 
+         <li>
+            <a href="Promotions&News.html">
+                Promotion
+            </a>
+        </li>  
+        <li>
+            <a href="sign in.html">
+                Sign In/Log Out
+            </a>
+        </li>
+    </ul>
+    
+    <!--Content-->
+    <br/><br/><br/>
+    <form id="registration" name="member regirtration" action="www.ppp.com" method="post" enctype="multipart/form-data">
+      <div align="center">
+    <fieldset>
+        <div>
+            <h2>Member Registration</h1>
+        </div>
+     <div style="font-size: 20px">
+         <table cellspacing="5" cellpadding="5">
+            <tr>
+                    <td style="width: 121px"><label for="userName">Your Name:</label></td>
+                    <td><input type="text" name="userName" id="userName" placeholder="First and Last Name"  required  maxlength="50" size="30"/>
+            </tr>
+            <tr>
+                    <td style="width: 121px"><label for="email">Email:</label></td>
+                    <td><input type="text" name="email" id="email" placeholder="Email"  required  maxlength="50" size="30"/>
+            </tr>
+            
+            <tr>
+                    <td style="width: 121px; height: 42px;"><label for="phone">Phone:</label></td>
+                    <td style="height: 42px"><input type="text" name="phone" id="phone" placeholder="Phone Number"  ></td>
+            </tr>
+            
+            <tr>
+                    <td style="width: 121px"><label for="userPassword">Password:</label></td>
+                    <td> <input   name="password" id="userPassword" type="password" placeholder="" value="" ></td>
+            </tr>
+         
+            </table>
+            </div>
+        </li></ul><p class="forgetmenot">  
+            <input type="submit" value="Register"> 
+            <a style="font-size: 15px" href="sign in.html">Sign In</a>
+                <a style="cursor:default;text-decoration:none;" href="javascript:;"> | </a>
+
+        </div>
+        
+    </fieldset>
+</form>
+  
+
+    
+    <!--Footer-->
+    <footer>
+        <nav id="left">
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                <li><a href="Location.html">Location</a></li>
+            </ul>
+        </nav>
+        <nav id="left">
+            <ul>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                <li><a href="Feedback Form.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <nav id="right">
+            <blockquote>Get more updated information!<br/>Follow</blockquote>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+        </nav>
+    </footer>
+    
+</body>
+
+</html>

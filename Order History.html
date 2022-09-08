@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Dark Leaf Bakery"/>
+    <meta name="keyword" content="breads,cookies,cakes"/>
+    <meta name="author" content="DCO1 G5"/>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0"/>
+
+    <title>Dark Leaf Bakery</title>
+    <link href="general layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+    dl{
+    width: 100%;
+    background-color: thistle;
+    color:blue;
+    border:1px solid black;
+}
+
+h3{
+    margin-left:30px;
+}
+
+dd{
+    font-weight: bold;
+}
+
+form{
+    text-align: right;
+    margin:20px;
+}
+
+form input[type=button] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: violet;
+    color: darkblue;
+    font-size: large;
+}
+
+div{
+    font-size: large;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <map id="ImgMap0" name="ImgMap0">
+            <area alt="" coords="0, 0, 259, 199" href="Homepage.html" shape="rect" title="Go to main page">
+        </map>
+        <img alt="Leaf" src="Dark%20Leaf%20Bakery.png" usemap="#ImgMap0"></header>
+    </header>
+
+    <ul class="bar">
+        <li class="dropdown">
+            <a href="Gallery.html"> Gallery</a>
+            <div class="dropdown-content">
+                <a href="Product Description.html#bread">Bread</a>
+                <a href="Product Description.html#cake">Cake</a>
+                <a href="Product Description.html#cookies">Cookies</a>
+            </div>
+        </li>
+        <li>
+            <a href="Bakery Class.html">
+                Baking Class
+            </a>
+        </li>  
+        <li>
+            <a href="Catering.html">
+                Catering
+            </a>
+        </li> 
+         <li>
+            <a href="gift redeem form.html">
+                Gift Redeem
+            </a>
+        </li> 
+         <li>
+            <a href="Promotions&News.html">
+                Promotion
+            </a>
+        </li>  
+        <li>
+            <a href="sign in.html">
+                Sign In/Log Out
+            </a>
+        </li>
+    </ul>
+    
+    <h1>Order History</h1>
+
+    <div>
+        <dl>
+            <hr/>
+            <dt><h3>Order #1082</h3></dt>
+            <dd> 
+                Order Date : 17/3/2020
+                <br/><br/>
+                Receiver : Wisma C. P. G.
+                <br/><br/>  
+                Product: 
+                <ul>
+                    <li>Banana Bread X2</li>
+                    <li>Chocolate Bread X2</li>
+                    <li>Chocolate Chip Cookies X2</li>
+                </ul>
+                <br/><br/>
+                Payment Method : Credit Card
+                <a href="Receipt.html"><input type="button" value="View Reciept"></a>
+            </dd>
+            
+            <br/><br/><br/> 
+          
+            <form action="#">
+                <a href="track order.html"><input type="button" value="Track Order"></a>
+            </form>
+            <hr/>
+        </dl>
+    </div>
+
+    <footer>
+        <nav id="left">
+            <ul>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="FAQ Term and Condition.html">FAQ</a></li>
+                <li><a href="Location.html">Location</a></li>
+            </ul>
+        </nav>
+        <nav id="left">
+            <ul>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Job Vacancy.html">Job Vacancy</a></li>
+                <li><a href="Feedback Form.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <nav id="right">
+            <blockquote>Get more updated information!<br/>Follow</blockquote>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
